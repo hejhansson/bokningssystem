@@ -1,0 +1,63 @@
+body, h1, h2, h3, h4, h5 {
+  font-family: Roboto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+.btn:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.btn.border-left {
+  border-left-color: rgba(0,0,0,.125);
+}
+.btn.border-right {
+  border-right-color: rgba(0,0,0,.125);
+}
+
+.container {
+  max-width: 1300px;
+}
+
+ul {
+  li {
+    a.right {
+      font-weight: normal;
+    }
+  }
+}
+
+nav {
+  .active {
+    a {
+      border-bottom: 2px solid #0074d9 !important;
+    }
+  }
+  a.btn {
+    font-weight: normal;
+    border-top: 2px solid white;
+    border-bottom: 2px solid transparent;
+    &.bold {
+      font-weight: bold;
+    }
+  }
+}
+.pass {
+  &-time {
+    top: -25px;
+    font-weight: normal;
+    font-size: 16px;
+  }
+}
+
+.time {
+  font-weight: normal;
+  font-size: 16px;
+}
