@@ -9,11 +9,13 @@ UserEdit = React.createClass({
   getUser(param) {
   },
   render() {
-    let { org } = this.data.currentUser
+    let { profile } = this.data.currentUser
     return (
       <div className="container clearfix">
         <div className="col col-8 bg-white border rounded p3">
-          { this.data.currentUser.profile.org_id }
+          OrgID: { profile.org_id }
+          <br/>
+          UserID: { this.props.userId }
         </div>
       </div>
     )
