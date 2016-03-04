@@ -57,6 +57,11 @@ AddPass = React.createClass({
               <input type="text" name="capacity" className="field col-12 block mb1" placeholder="" />
             </div>
 
+            <div className="col col-6 px2 mt2">
+              <label>Plats</label>
+              <input type="text" name="capacity" className="field col-12 block mb1" placeholder="" />
+            </div>
+
             <div className="col col-12 px2 mt2">
               <input className="btn right btn-primary" type="submit" value="Publicera"/>
             </div>

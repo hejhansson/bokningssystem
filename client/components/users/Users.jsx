@@ -78,7 +78,7 @@ Users = React.createClass({
           <div className="right col-3">
             <div className="col col-12 p2 border rounded  bg-white">
               <h3 className="mt1">Lägg till användare</h3>
-                <p className="gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className="gray">Användaren du lägger till kommer få ett mail!</p>
 
                 <form onSubmit={ this.handleNewUser } className="col col-12">
                   <label htmlFor="">E-mail</label>
