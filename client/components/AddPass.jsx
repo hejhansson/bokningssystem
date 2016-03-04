@@ -65,10 +65,7 @@ AddPass = React.createClass({
             <div className="col col-12 px2 mt2">
               <input className="btn right btn-primary" type="submit" value="Publicera"/>
             </div>
-
-
           </form>
-
 
           <div className="col-6 mx-auto mt4">
             <h2 className="px2">Hämta data från passmall</h2>

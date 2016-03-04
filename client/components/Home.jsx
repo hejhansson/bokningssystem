@@ -42,6 +42,10 @@ Home = React.createClass({
           <span className="py2 px2 flex-auto">
             <br/><small className=""><b>Lediga platser</b><br/>21</small>
           </span>
+
+          <span className="py2 px2 flex-auto">
+            <br/><small className=""><b>Plats</b><br/>Sal C</small>
+          </span>
           <a onClick={ this.handleBokning } className="btn btn-primary right mr2">Boka</a>
         </li>;
     });
