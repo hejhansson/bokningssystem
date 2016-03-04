@@ -9,6 +9,7 @@ AddPass = React.createClass({
       text: pass,
       createdAt: new Date()
     });
+    console.log(this.refs.datepicker.getDate());
 
     /*
     {
@@ -47,6 +48,7 @@ AddPass = React.createClass({
               <label>Tid</label>
               <input type="text" name="start_time" className="field col-12 block mb1" placeholder="" />
             </div>
+
             <div className="col col-6 px2 mt2">
               <label>Längd <small className="gray">(i minuter)</small></label>
               <input type="text" name="length" className="field col-12 block mb1" placeholder="" />
@@ -63,8 +65,14 @@ AddPass = React.createClass({
             </div>
 
             <div className="col col-12 px2 mt2">
+              <label>Datum</label>
+              <DatePicker ref="datepicker" />
+            </div>
+
+            <div className="col col-12 px2 mt2">
               <input className="btn right btn-primary" type="submit" value="Publicera"/>
             </div>
+
           </form>
 
           <div className="col-6 mx-auto mt4">
