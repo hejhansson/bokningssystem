@@ -3,6 +3,8 @@ AddPass = React.createClass({
     event.preventDefault();
     var pass = event.target.add.value;
 
+    console.log(event.target.trainer.value);
+
     Pass.insert({
       text: pass,
       createdAt: new Date()
@@ -43,16 +45,16 @@ AddPass = React.createClass({
 
             <div className="col col-6 px2 mt2">
               <label>Tid</label>
-              <input type="text" name="trainer" className="field col-12 block mb1" placeholder="" />
+              <input type="text" name="start_time" className="field col-12 block mb1" placeholder="" />
             </div>
             <div className="col col-6 px2 mt2">
               <label>Längd <small className="gray">(i minuter)</small></label>
-              <input type="text" name="trainer" className="field col-12 block mb1" placeholder="" />
+              <input type="text" name="length" className="field col-12 block mb1" placeholder="" />
             </div>
 
             <div className="col col-6 px2 mt2">
               <label>Platser</label>
-              <input type="text" name="trainer" className="field col-12 block mb1" placeholder="" />
+              <input type="text" name="capacity" className="field col-12 block mb1" placeholder="" />
             </div>
 
             <div className="col col-12 px2 mt2">
