@@ -29,6 +29,8 @@ AddPass = React.createClass({
     */
     FlowRouter.go('Home');
   },
+  componentDidMount() {
+  },
   render() {
     return (
       <div className="container">
@@ -66,7 +68,7 @@ AddPass = React.createClass({
 
             <div className="col col-12 px2 mt2">
               <label>Datum</label>
-              <DatePicker ref="datepicker" />
+              <input className="field block" type="date"/>
             </div>
 
             <div className="col col-12 px2 mt2">
@@ -87,7 +89,6 @@ AddPass = React.createClass({
               </select>
             </form>
           </div>
-
       </div>
     )
   }
