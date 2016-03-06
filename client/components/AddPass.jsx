@@ -1,15 +1,36 @@
 AddPass = React.createClass({
+
+  date: "",
+
+  setDate() {
+
+    var d = new Date();
+
+    var month = d.getMonth();
+    if (month < 10) {
+      month = "0" + month;
+    }
+    var date = d.getDate();
+    if (date < 10) {
+      date = "0" + date;
+    }
+
+    this.date = d.getFullYear() + "-" + month + "-" + date;
+
+  },
+
   handleSubmit(event) {
     event.preventDefault();
     var pass = event.target.add.value;
 
-    console.log(event.target.trainer.value);
+    var d = new Date();
+
+
 
     Pass.insert({
       text: pass,
       createdAt: new Date()
     });
-    console.log(this.refs.datepicker.getDate());
 
     /*
     {
@@ -32,6 +53,8 @@ AddPass = React.createClass({
   componentDidMount() {
   },
   render() {
+    this.setDate();
+
     return (
       <div className="container">
 
@@ -68,7 +91,7 @@ AddPass = React.createClass({
 
             <div className="col col-12 px2 mt2">
               <label>Datum</label>
-              <input className="field block" type="date"/>
+              <input className="field block" value={this.date} type="date"/>
             </div>
 
             <div className="col col-12 px2 mt2">
