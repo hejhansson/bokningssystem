@@ -1,8 +1,18 @@
 AddPass = React.createClass({
 
-  date: "",
+  mixins: [ReactMeteorData],
+  getMeteorData() {
+    return {
+      pass: Pass.find({}, { sort: {createdAt: -1}}).fetch(),
+      currentUser: Meteor.userId(),
+    }
+  },
 
-  setDate() {
+  getInitialState() {
+    return { date: this.getTodaysDate() }
+  },
+
+  getTodaysDate() {
 
     var d = new Date();
 
@@ -15,21 +25,22 @@ AddPass = React.createClass({
       date = "0" + date;
     }
 
-    this.date = d.getFullYear() + "-" + month + "-" + date;
+    return d.getFullYear() + "-" + month + "-" + date;
 
+  },
+
+  handleDateChange(event) {
+    this.setState({date: event.target.value})
   },
 
   handleSubmit(event) {
     event.preventDefault();
     var pass = event.target.add.value;
 
-    var d = new Date();
-
-
-
     Pass.insert({
       text: pass,
-      createdAt: new Date()
+      createdAt: new Date(),
+      user_id: this.data.currentUser
     });
 
     /*
@@ -53,8 +64,6 @@ AddPass = React.createClass({
   componentDidMount() {
   },
   render() {
-    this.setDate();
-
     return (
       <div className="container">
 
@@ -91,7 +100,7 @@ AddPass = React.createClass({
 
             <div className="col col-12 px2 mt2">
               <label>Datum</label>
-              <input className="field block" value={this.date} type="date"/>
+              <input className="field block" onChange={ this.handleDateChange } value={ this.state.date } type="date"/>
             </div>
 
             <div className="col col-12 px2 mt2">
